@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>The Fresh SeaFood | Seafanantic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="data/favicon-32x32.png" />
+    <link href="trangchu.css" rel="stylesheet" />
+  </head>
+  <body class="p-3 m-0 border-0 bd-example">
+    <!-- Example Code -->
+
+    <section class="header">
+      <nav class="navbar bg-light navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto" href="#">Seafanatic</a>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Seafanatic
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-lg-2 active"
+                    aria-current="page"
+                    href="#"
+                    >Trang chủ</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link mx-lg-2 dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Sản phẩm
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="AllProducts/Cua/cuaghe.html"
+                        >Cua-Ghẹ</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="AllProducts/Tom/tom.html"
+                        >Tôm</a
+                      >
+                    </li>
+                    <li></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="AllProducts/OtherProduct/sanphamkhac.html"
+                        >Sản phẩm khác</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="AllProducts/sanpham1.html"
+                        >Tất cả sản phẩm</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="GioiThieu/gioithieu.html">Về chúng tôi</a>
+                </li>
+              </ul>
+              <div class="search-container">
+                <form class="d-flex mt-1 mx-3" role="search">
+                  <input
+                    name="q"
+                    id="searchInput"
+                    class="form-control"
+                    type="text"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    id="searchButton"
+                    class="btn btn-outline-info"
+                    type="submit"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </form>
+                <div id="result"></div>
+              </div>
+            </div>
+          </div>
+          <ul class="list mt-4">
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                ><i class="fa fa-user"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a id="username" class="dropdown-item" href="#"></a></li>
+                <li>
+                  <a id="logout" class="dropdown-item" href="trangchu.html"
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="Giỏ hàng/giohang.html">
+            <button
+              type="button"
+              class="btn-cart btn-primary position-relative mt-2"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span
+                id="count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                0
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+          </a>
+          <button
+            class="navbar-toggler pe-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            fdprocessedid="71g35e"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </section>
+
+    <!-- End Example Code -->
+    <section class="content">
+      <div class="slider">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <picture>
+                <source media="(max-width: 767px)" srcset="data/slide6.jpg" />
+                <source media="(min-width: 768px)" srcset="data/slide3.jpg" />
+                <img
+                  alt="TUNGBUNG"
+                  class="ls-is-cached lazyloaded d-block w-100"
+                  src="data/slide3.jpg"
+                />
+              </picture>
+            </div>
+            <div class="carousel-item">
+              <picture>
+                <source media="(max-width: 767px)" srcset="data/slide4.jpg" />
+                <source media="(min-width: 768px)" srcset="data/slide.jpg" />
+                <img
+                  alt="30%"
+                  class="ls-is-cached lazyloaded d-block w-100"
+                  src="data/slide.jpg"
+                />
+              </picture>
+            </div>
+            <div class="carousel-item">
+              <picture>
+                <source media="(max-width: 767px)" srcset="data/slide5.jpg" />
+                <source media="(min-width: 768px)" srcset="data/slide1.jpg" />
+                <img
+                  alt="40%"
+                  class="ls-is-cached lazyloaded d-block w-100"
+                  src="data/slide1.jpg"
+                />
+              </picture>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="container slider1-content">
+        <div class="title-content-2">
+          <h2 class="text-center">SẢN PHẨM MỚI</h2>
+        </div>
+        <hr />
+        <div class="slider1">
+          <div class="slider-items">
+            <div class="slider-img">
+              <a href="Cua/Cuaghe/cuanau.html">
+                <img class="rounded-5" src="data/Cua Nâu Sống.webp" alt="" />
+              </a>
+            </div>
+            <div class="slider-left">
+              <p class="name"><b>Cua nâu sống</b></p>
+              <p class="price">552,000 đ/1con</p>
+              <div>
+                <a href="AllProducts/Cua/Cuaghe/cuanau.html"
+                  ><button class="buy">Mua Ngay</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-items">
+            <div class="slider-img">
+              <a href="Tom/Tom/tomhumnho.html">
+                <img
+                  class="rounded-5"
+                  src="data/Tôm Hùng Alaska Nhỏ.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="slider-left">
+              <p class="name"><b>Tôm Hùng Alaska Nhỏ</b></p>
+              <p class="price">745,000 đ/con</p>
+              <div>
+                <a href="AllProducts/Tom/Tom/tomhumnho.html"
+                  ><button class="buy">Mua Ngay</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-items">
+            <div class="slider-img">
+              <a href="Cua/Cuaghe/cuatuyet.html">
+                <img class="rounded-5" src="data/Cua Tuyết Sống.webp" alt="" />
+              </a>
+            </div>
+            <div class="slider-left">
+              <p class="name"><b>Cua tuyết sống</b></p>
+              <p class="price">1,890,000 đ/1kg</p>
+              <div>
+                <a href="AllProducts/Cua/Cuaghe/cuatuyet.html"
+                  ><button class="buy">Mua Ngay</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-items">
+            <div class="slider-img">
+              <img class="rounded-5" src="data/mq-ch.jpg" alt="" />
+            </div>
+            <div class="slider-left">
+              <p class="name"><b>Cá mặt quỷ</b></p>
+              <p class="price">1,550,000 đ/1kg</p>
+              <div>
+                <button class="buy" onclick="return soldout()">Mua Ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-items">
+            <div class="slider-img">
+              <a href="AllProducts/OtherProduct/Other/ocxacu.html">
+                <img
+                  class="rounded-5"
+                  src="data/[550x550-cr]oc-xa-cu--24.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="slider-left">
+              <p class="name"><b>Ốc xà cừ</b></p>
+              <p class="price">750,000 đ/1kg</p>
+              <div>
+                <a href="AllProducts/OtherProduct/Other/ocxacu.html"
+                  ><button class="buy">Mua Ngay</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-items">
+            <div class="slider-img">
+              <img
+                class="rounded-5"
+                src="data/ca_thu_9a37157d653f4ba19956f561d7dd90dd_grande.jpg"
+                alt=""
+              />
+            </div>
+            <div class="slider-left">
+              <p class="name"><b>Cá thu</b></p>
+              <p class="price">150,000 đ/1kg</p>
+              <div>
+                <button class="buy" onclick="return soldout()">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-5">
+        <div class="title-content-1"><h2 class="text-uppercase text-center">Sản phẩm nổi bật</h2></div>
+        <hr class="mb-4"/>
+        <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+            <div class="col">
+              <div class="card">
+                <a href="AllProducts/Cua/Cuaghe/cuagachcamau.html">
+                  <img
+                  src="data/Cua Gạch Cà Mau.webp"
+                  class="card-img-top"
+                  alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-10"><h5 class="card-title">Cua gạch Cà Mau</h5></div>
+                    <div class="col-md-2">
+                      <button class="addToCartButton icon-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="tag_icon ratiobox" bis_skin_checked="1"><img class="heightwidth-auto" width="40" height="40" src="//theme.hstatic.net/1000030244/1001119993/14/icon_tag_3.png?v=4386" alt="sống "></div>
+            
+                  <p class="card-text product-price">276,500 đ/con</p>
+                </div>
+                <div class="mb-5 d-flex justify-content-around">
+                  <a href="AllProducts/Cua/Cuaghe/cuagachcamau.html"><button class="btn btn-primary">Mua Ngay</button></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <a href="AllProducts/Cua/Cuaghe/cuahoangde.html">
+                  <img
+                  src="data/Cua Hoàng Đế.jpg"
+                  class="card-img-top"
+                  alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-10"><h5 class="card-title">Cua Hoàng Đế</h5></div>
+                    <div class="col-md-2">
+                      <button class="addToCartButton icon-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="tag_icon ratiobox" bis_skin_checked="1"><img class="heightwidth-auto" width="40" height="40" src="//theme.hstatic.net/1000030244/1001119993/14/icon_tag_3.png?v=4386" alt="sống "></div>
+
+                  <p class="card-text product-price">2,690,000 đ/1kg</p>
+                </div>
+                <div class="mb-5 d-flex justify-content-around">
+                  <a href="AllProducts/Cua/Cuaghe/cuahoangde.html"><button class="btn btn-primary">Mua Ngay</button></a>
+              </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <a href="AllProducts/Tom/Tom/tomhumxanh.html">
+                  <img
+                  src="data/Tôm Hùm Xanh Sống.jpg"
+                  class="card-img-top"
+                  alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-10"><h5 class="card-title">Tôm hùm xanh sống</h5></div>
+                    <div class="col-md-2">
+                      <button class="addToCartButton icon-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="tag_icon ratiobox" bis_skin_checked="1"><img class="heightwidth-auto" width="40" height="40" src="//theme.hstatic.net/1000030244/1001119993/14/icon_tag_3.png?v=4386" alt="sống "></div>
+
+                  <p class="card-text product-price">529,000 đ/con</p>
+                </div>
+                <div class="mb-5 d-flex justify-content-around">
+                  <a href="AllProducts/Tom/Tom/tomhumxanh.html"><button class="btn btn-primary">Mua Ngay</button></a>
+              </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <a href="AllProducts/Cua/Cuaghe/ghexanhsong.html">
+                  <img
+                  src="data/Ghẹ Xanh Sống.jpg"
+                  class="card-img-top"
+                  alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-10"><h5 class="card-title">Ghẹ xanh sống</h5></div>
+                    <div class="col-md-2">
+                      <button class="addToCartButton icon-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="tag_icon ratiobox" bis_skin_checked="1"><img class="heightwidth-auto" width="40" height="40" src="//theme.hstatic.net/1000030244/1001119993/14/icon_tag_3.png?v=4386" alt="sống "></div>
+
+                  <p class="card-text product-price">275,000 đ/1kg</p>
+                </div>
+                <div class="mb-5 d-flex justify-content-around">
+                  <a href="AllProducts/Cua/Cuaghe/ghexanhsong.html"><button class="btn btn-primary">Mua Ngay</button></a>
+              </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <img
+                  src="data/ca ngu.png"
+                  class="card-img-top"
+                  alt=""
+                />
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-10"><h5 class="card-title">Cá Ngừ Đại Dương</h5></div>
+                    <div class="col-md-2">
+                      <button class="addToCartButton icon-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="tag_icon ratiobox" bis_skin_checked="1"><img class="heightwidth-auto" width="40" height="40" src="//theme.hstatic.net/1000030244/1001119993/14/icon_tag_3.png?v=4386" alt="sống "></div>
+
+                  <p class="card-text product-price">155,000 đ/1kg</p>
+                </div>
+                <div class="mb-5 d-flex justify-content-around">
+                  <button class="btn btn-primary" onclick="return soldout()">Mua ngay</button>
+              </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card">
+                <a href="AllProducts/OtherProduct/Other/bachtuoc.html">
+                  <img
+                  src="data/bach tuoc.webp"
+                  class="card-img-top"
+                  alt=""
+                  />
+                </a>
+                <div class="card-body">
+                 <div class="row">
+                    <div class="col-md-10"><h5 class="card-title">Bạch Tuộc</h5></div>
+                    <div class="col-md-2">
+                      <button class="addToCartButton icon-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="tag_icon ratiobox" bis_skin_checked="1"><img class="heightwidth-auto" width="40" height="40" src="//theme.hstatic.net/1000030244/1001119993/14/icon_tag_3.png?v=4386" alt="sống "></div>
+
+                  <p class="card-text product-price">350,000 đ/1kg</p>
+                </div>
+                <div class="mb-5 d-flex justify-content-around">
+                  <button class="btn btn-primary">Mua Ngay</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-5">
+        <h2 class="title-more text-uppercase text-center">Khám phá thêm</h2>
+        <hr class="mb-4" />
+        <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+          <div class="col">
+            <div class="card">
+              <a href="OtherProduct/Other/muc.html">
+                <img
+                  src="data/[550x550-cr]muc-ong-86.jpg"
+                  class="card-img-top"
+                  alt=""
+                />
+              </a>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h5 class="card-title">Mực sống</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                <a href="AllProducts/sanpham2.html"
+                  ><button class="btn btn-primary">Đến xem</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <a href="OtherProduct/Other/octoi.html">
+                <img src="data/oc-toi.jpg" class="card-img-top" alt="" />
+              </a>
+              <div class="card-body">
+                <div class="row">
+                  <h5 class="card-title">Ốc tươi sống</h5>
+                </div>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                <a href="AllProducts/sanpham2.html"
+                  ><button class="btn btn-primary">Đến xem</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <a href="OtherProduct/Other/hau.html">
+                <img
+                  src="data/cach-che-bien-hau-1.jpg"
+                  class="card-img-top"
+                  alt=""
+                />
+              </a>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h5 class="card-title">Hàu tươi sống</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-5 d-flex justify-content-around">
+                <a href="AllProducts/sanpham2.html"
+                  ><button class="btn btn-primary">Đến xem</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-index-aboutus mb-5 mt-5">
+      <div class="container-fluid" bis_skin_checked="1">
+        <div class="content-home-about" bis_skin_checked="1">
+          <div class="row align-items-center" bis_skin_checked="1">
+            <div class="col-12 col-md-6" bis_skin_checked="1">
+              <div class="aboutus-inner-content" bis_skin_checked="1">
+                <div class="section-head" bis_skin_checked="1">
+                  <h2>Khám phá</h2>
+                  <h3>CÂU CHUYỆN CỦA SEAFANATIC</h3>
+                </div>
+                <div class="section-content-info" bis_skin_checked="1"></div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 text-center" bis_skin_checked="1">
+              <div
+                class="aboutus-inner-image ratiobox lazyloaded"
+                bis_skin_checked="1"
+                data-expand="-1"
+              >
+                <img
+                  class="lazyautosizes lazyloaded rounded-5"
+                  data-sizes="auto"
+                  data-src="data/khampha.jpg"
+                  data-lowsrc="data/khampha.jpg"
+                  src="data/khampha.jpg"
+                  alt=""
+                  sizes="635px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-index-counters pt-5">
+      <div class="container" bis_skin_checked="1">
+        <div class="list-counters" bis_skin_checked="1">
+          <div class="counters-item" bis_skin_checked="1">
+            <div
+              class="counters-item__inner d-flex flex-nowrap justify-content-lg-center"
+              bis_skin_checked="1"
+            >
+              <div
+                class="counters-img ratiobox lazyloaded"
+                bis_skin_checked="1"
+                data-expand="-1"
+              >
+                <img
+                  class="lazyautosizes lazyloaded"
+                  data-sizes="auto"
+                  data-src="//theme.hstatic.net/1000332427/1000688251/14/home_counters_1_fa.png?v=3"
+                  data-lowsrc="//theme.hstatic.net/1000332427/1000688251/14/home_counters_1_fa.png?v=3"
+                  src="//theme.hstatic.net/1000332427/1000688251/14/home_counters_1_fa.png?v=3"
+                  alt=""
+                  sizes="80px"
+                />
+              </div>
+              <div class="counters-info" bis_skin_checked="1">
+                <p class="value">+ 50</p>
+                <p>Hải sản đa dạng</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="counters-item" bis_skin_checked="1">
+            <div
+              class="counters-item__inner d-flex flex-nowrap justify-content-lg-center"
+              bis_skin_checked="1"
+            >
+              <div
+                class="counters-img ratiobox lazyloaded"
+                bis_skin_checked="1"
+                data-expand="-1"
+              >
+                <img
+                  class="lazyautosizes lazyloaded"
+                  data-sizes="auto"
+                  data-src="//theme.hstatic.net/1000332427/1000688251/14/home_counters_2_fa.png?v=3"
+                  data-lowsrc="//theme.hstatic.net/1000332427/1000688251/14/home_counters_2_fa.png?v=3"
+                  src="//theme.hstatic.net/1000332427/1000688251/14/home_counters_2_fa.png?v=3"
+                  alt=""
+                  sizes="80px"
+                />
+              </div>
+              <div class="counters-info" bis_skin_checked="1">
+                <p class="value">+ 100</p>
+                <p>Đơn hàng mỗi ngày</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="counters-item" bis_skin_checked="1">
+            <div
+              class="counters-item__inner d-flex flex-nowrap justify-content-lg-center"
+              bis_skin_checked="1"
+            >
+              <div
+                class="counters-img ratiobox lazyloaded"
+                bis_skin_checked="1"
+                data-expand="-1"
+              >
+                <img
+                  class="lazyautosizes lazyloaded"
+                  data-sizes="auto"
+                  data-src="//theme.hstatic.net/1000332427/1000688251/14/home_counters_3_fa.png?v=3"
+                  data-lowsrc="//theme.hstatic.net/1000332427/1000688251/14/home_counters_3_fa.png?v=3"
+                  src="//theme.hstatic.net/1000332427/1000688251/14/home_counters_3_fa.png?v=3"
+                  alt=""
+                  sizes="80px"
+                />
+              </div>
+              <div class="counters-info" bis_skin_checked="1">
+                <p class="value">+ 100</p>
+                <p>Cách chế biến</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer bg-light text-dark pt-6 pb-4">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5
+              class="footer_title text-uppercase mb-4 font-weight-bold text-info"
+            >
+              Giới thiệu
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Sản phẩm</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Khuyến mãi</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Tuyển dụng</a
+              >
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5
+              class="footer_title text-uppercase mb-4 font-weight-bold text-info"
+            >
+              Giúp đỡ
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Tài khoản của bạn</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Giỏ hàng</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Help</a
+              >
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5
+              class="footer_title text-uppercase mb-4 font-weight-bold text-info"
+            >
+              Điều khoản
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Điều khoản</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Chính sách bảo mật</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Hóa đơn GTGT</a
+              >
+            </p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5
+              class="footer_title text-uppercase mb-4 font-weight-bold text-info"
+            >
+              Liên hệ
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <i class="fas fa-home mr-3"></i>
+              Ninh Kieu, CT, VN
+            </p>
+            <p>
+              <i class="fas fa-envelope mr-3"></i>
+              teamfourk48@gmail.com
+            </p>
+            <p>
+              <i class="fas fa-phone mr-3"></i>
+              +84 0189 0072
+            </p>
+            <p>
+              <i class="fas fa-print mr-3"></i>
+              +012 3452890
+            </p>
+          </div>
+        </div>
+
+        <hr class="mb-4" />
+
+        <div class="row d-flex justify-content-center">
+          <div>
+            <p class="text-center">
+              Copyright 2024 ALL Rights Reserved By :
+              <a href="#" style="text-decoration: none">
+                <strong class="text-info">Team 4</strong>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="text-center">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">
+                  <i class="fab fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript" src="trangchu.js"></script>
+  </body>
+</html>

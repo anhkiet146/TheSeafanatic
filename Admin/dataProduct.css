@@ -1,0 +1,23 @@
+/* CSS cho nút chỉnh sửa */
+.edit-btn {
+  color: blue;
+  cursor: pointer;
+  width: 30px;
+  margin-left: 2px;
+}
+
+.edit-btn:hover {
+  color: darkblue;
+}
+
+/* CSS cho nút xóa */
+.delete-btn {
+  color: red;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}

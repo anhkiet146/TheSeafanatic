@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sản phẩm</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="sanphamkhac.css" />
+    <link rel="shortcut icon" type="image/png" href="../../data/favicon-32x32.png" />
+    <link
+      href="logo.ico.png"
+      rel="shortcut icon"
+      type="images/vnd.microsoft.icon"
+    />
+    <script src="sanphamkhac.js"></script>
+  </head>
+  <body>
+    <section class="header mb-6">
+      <nav class="navbar bg-light navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto" href="#">Seafanatic</a>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Seafanatic
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-lg-2"
+                    aria-current="page"
+                    id="page"
+                    style="cursor: pointer"
+                    >Trang chủ</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link mx-lg-2 dropdown-toggle active"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Sản phẩm
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="../Cua/cuaghe.html"
+                        >Cua-Ghẹ</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../Tom/tom.html">Tôm</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Sản phẩm khác</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../sanpham1.html"
+                        >Tất cả sản phẩm</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="../../GioiThieu/gioithieu.html">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="#">Hỗ trợ</a>
+                </li>
+              </ul>
+              <form class="d-flex mt-1 mx-3" role="search">
+                <input
+                  id="searchInput"
+                  class="form-control"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-info" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <a
+            href="../../DangNhap_DangKy/dangnhap.html"
+            id="loginButton"
+            class="login-button"
+            >Login</a
+          >
+          <ul id="userDropdown" class="list mt-4"></ul>
+          <a href="../../Giỏ hàng/giohang.html">
+            <button
+              type="button"
+              class="btn-cart btn-primary position-relative mt-2"
+              style="border: none"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span
+                id="count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                0
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+          </a>
+          <button
+            class="navbar-toggler pe-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            fdprocessedid="71g35e"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </section>
+
+    <section class="container mb-5">
+      <div class="title3">Các Loại Hải Sản Khác</div>
+      <div class="line"></div>
+      <div class="row">
+        <div class="col-md-3">
+          <a class="home-product-item" href="Other/bobien.html">
+            <div
+              class="home-product-item__img"
+              style="background-image: url(Other/Product/Bọ\ Biển\ Sống.webp)"
+            ></div>
+            <h4 class="home-product-item__name">Bọ Biển</h4>
+            <div class="home-product-item__price">925,000đ/1con</div>
+            <div type="button" class="home-product-item__cart">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a class="home-product-item" href="Other/ocxacu.html">
+            <div
+              class="home-product-item__img"
+              style="background-image: url(Other/Product/Ốc\ Xà\ Cừ.jpg)"
+            ></div>
+            <h4 class="home-product-item__name">Ốc Xà Cừ</h4>
+            <di2v class="home-product-item__price">750,000đ/1kg</di2v>
+            <div type="button" class="home-product-item__cart">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a class="home-product-item" href="Other/octoi.html">
+            <div
+              class="home-product-item__img"
+              style="background-image: url(Other/Product/Ốc\ Tỏi.jpg)"
+            ></div>
+            <h4 class="home-product-item__name">Ốc Tỏi</h4>
+            <div class="home-product-item__price">250,000đ/1kg</div>
+            <div type="button" class="home-product-item__cart">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a class="home-product-item" href="Other/bachtuoc.html">
+            <div
+              class="home-product-item__img"
+              style="background-image: url(Other/Product/Bạch\ Tuộc.webp)"
+            ></div>
+            <h4 class="home-product-item__name">Bạch Tuộc</h4>
+            <div class="home-product-item__price">350,000đ/1kg</div>
+            <div type="button" class="home-product-item__cart">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <a class="home-product-item" href="Other/muc.html">
+            <div
+              class="home-product-item__img"
+              style="background-image: url(Other/Product/Mực\ Sống.jpg)"
+            ></div>
+            <h4 class="home-product-item__name">Mực Sống</h4>
+            <div class="home-product-item__price">360,000đ/1kg</div>
+            <div type="button" class="home-product-item__cart">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a class="home-product-item" onclick="return ca()">
+            <div
+              class="home-product-item__img"
+              style="
+                background-image: url(Other/Product/Cá\ Ngừ\ Đại\ Dương.png);
+              "
+            ></div>
+            <h4 class="home-product-item__name">Cá Ngừ Đại Dương</h4>
+            <div class="home-product-item__price">155,000đ/1kg</div>
+            <div type="button" class="home-product-item__soldout">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a class="home-product-item" onclick="return ca()">
+            <div
+              class="home-product-item__img"
+              style="background-image: url(Other/Product/Cá\ Thu\ Sống.jpg)"
+            ></div>
+            <h4 class="home-product-item__name">Cá Thu Sống</h4>
+            <div class="home-product-item__price">150,000đ/1kg</div>
+            <div type="button" class="home-product-item__soldout">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a class="home-product-item" onclick="return ca()">
+            <div
+              class="home-product-item__img"
+              style="background-image: url(Other/Product/Cá\ Mặt\ Quỷ.jpg)"
+            ></div>
+            <h4 class="home-product-item__name">Cá Mặt Quỷ</h4>
+            <div class="home-product-item__price">1,550,000đ/1kg</div>
+            <div type="button" class="home-product-item__soldout">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <a class="home-product-item" href="Other/hau.html">
+            <div
+              class="home-product-item__img"
+              style="background-image: url(Other/Product/Hàu\ Tươi\ Sống.jpg)"
+            ></div>
+            <h4 class="home-product-item__name">Hàu Tươi Sống</h4>
+            <div class="home-product-item__price">50,000đ/túi</div>
+            <div type="button" class="home-product-item__cart">
+              <img class="img" src="shopping-cart.png" />
+            </div>
+            <div class="home-product-item__condition">
+              <span>Sống</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer bg-light text-dark pt-6 pb-4">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5
+              class="footer_title text-uppercase mb-4 font-weight-bold text-info"
+            >
+              Giới thiệu
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Sản phẩm</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Khuyến mãi</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Tuyển dụng</a
+              >
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5
+              class="footer_title text-uppercase mb-4 font-weight-bold text-info"
+            >
+              Giúp đỡ
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Tài khoản của bạn</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Giỏ hàng</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Help</a
+              >
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5
+              class="footer_title text-uppercase mb-4 font-weight-bold text-info"
+            >
+              Điều khoản
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Điều khoản</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Chính sách bảo mật</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-dark" style="text-decoration: none"
+                >Hóa đơn GTGT</a
+              >
+            </p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5
+              class="footer_title text-uppercase mb-4 font-weight-bold text-info"
+            >
+              Liên hệ
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <i class="fas fa-home mr-3"></i>
+              Ninh Kieu, CT, VN
+            </p>
+            <p>
+              <i class="fas fa-envelope mr-3"></i>
+              teamfourk48@gmail.com
+            </p>
+            <p>
+              <i class="fas fa-phone mr-3"></i>
+              +84 0189 0072
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="sanphamkhac.js"></script>
+  </body>
+</html>

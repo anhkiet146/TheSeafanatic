@@ -1,0 +1,286 @@
+body {
+  background-color: #b2c2d1;
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  width: 100%;
+  margin-top: 20px;
+  margin-top: 0;
+  background-color: #fff;
+  text-align: center;
+
+  /* Border */
+  /* border-radius: 10px 10px  10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px; 
+	-webkit-border-radius: 10px 10px 10px 10px;  */
+
+  /* -moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888; */
+  /* box-shadow: 0 0 5px 5px #888; */
+  /* border:solid 1px #808080; */
+}
+
+/*navbar*/
+.navbar {
+  background-color: #f5f9fa;
+  height: 80px;
+  margin: 20px 5px;
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  color: #47a8d8;
+  font-size: 24px;
+  transition: 0.3s color;
+}
+
+.login-button,
+.btn-cart {
+  background-color: #47a8d8;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.25s background-color;
+}
+
+.btn-cart {
+  margin-left: 10px;
+  width: 40px;
+  padding-left: 12px;
+}
+
+.btn-cart:hover {
+  background-color: rgb(225, 133, 27);
+}
+
+.login-button:hover {
+  background-color: rgb(225, 133, 27);
+  color: white;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #47a8d8;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+/*End navbar*/
+
+.list {
+  width: 40px;
+  height: 37px;
+  list-style: none;
+  padding: 3px 8px;
+  background-color: #47a8d8;
+  border-radius: 20px;
+}
+
+.list:hover {
+  background-color: rgb(255, 90, 24);
+}
+
+.fa-user {
+  color: #fff;
+}
+
+/*Footer*/
+.footer p {
+  text-align: left;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  font-size: 14px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.footer h5 {
+  font-size: 18px;
+  text-align: left;
+}
+
+.footer > h5 > li {
+  text-align: left;
+}
+/*End footer*/
+
+.group-box {
+  margin-top: 150px;
+  /* border:1px solid #999; */
+  background: #f3f3f3;
+  border: none;
+  width: 450px;
+  height: 450px;
+
+  /* -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+	
+    -moz-box-shadow:2px 2px 5px #ccc;
+    -webkit-box-shadow:2px 2px 5px #ccc; */
+  /* box-shadow:3px 3px 10px #ddd; */
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.size {
+  position: absolute;
+  transform: translate(-50, -50);
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.size input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  position: relative;
+  color: #206699;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: 2px solid #206699;
+  border-radius: 5px;
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+label:before {
+  /* content: ""; */
+  height: 30px;
+  width: 30px;
+  border: 3px solid #206699;
+  margin-right: 20px;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #206699;
+  color: white;
+}
+
+input[type="radio"]:checked + label:before {
+  /* height: 16px;
+    width: 16px; */
+  border: 10px solid white;
+  background-color: #206699;
+}
+
+#h2 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+#h2a {
+  text-align: left;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+#h2b {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+div .selection {
+  font-size: 20px;
+  text-align: left;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.medium {
+  margin-left: 15px;
+}
+
+.large {
+  margin-left: 35px;
+}
+
+.button {
+  padding: 3px 7px 10px;
+  cursor: pointer;
+  color: blue;
+  text-align: center;
+  color: white;
+  background-color: rgb(249, 154, 12);
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: rgb(249, 107, 12);
+}
+
+@media (max-width: 995px) {
+  .left-side {
+    margin-right: 50px;
+    width: 100%;
+  }
+
+  .right-side {
+    margin-left: 20px;
+  }
+}

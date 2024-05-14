@@ -1,0 +1,394 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.list {
+  width: 40px;
+  height: 37px;
+  list-style: none;
+  padding: 3px 8px;
+  background-color: #47a8d8;
+  border-radius: 20px;
+}
+
+.list:hover {
+  background-color: rgb(255, 90, 24);
+}
+
+.fa-user {
+  color: #fff;
+}
+
+.navbar {
+  background-color: #f5f9fa;
+  height: 80px;
+  margin: 20px 5px;
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  color: #47a8d8;
+  font-size: 24px;
+  transition: 0.3s color;
+}
+
+#loginButton,
+.btn-cart {
+  background-color: #47a8d8;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.25s background-color;
+}
+
+.btn-cart {
+  margin-left: 10px;
+  width: 40px;
+  padding-left: 12px;
+}
+
+.btn-cart:hover {
+  background-color: rgb(249, 133, 37);
+}
+
+#loginButton:hover {
+  background-color: rgb(249, 133, 37);
+  color: white;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #47a8d8;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+/*End navbar*/
+
+#searchInput {
+  position: relative;
+}
+
+#result {
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  width: 210px;
+  background-color: white;
+  z-index: 1;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+#result ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#result ul li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+#result ul li:hover {
+  background: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+hr {
+  color: #ddd;
+  background-color: #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.flexContain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#khongCoSanPham {
+  opacity: 0;
+  width: 0;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  height: 310px;
+}
+/* Home Product */
+.homeproduct {
+  list-style-type: none;
+}
+
+.sanPham {
+  width: 238px;
+  border: 1px solid #eee;
+  transition-duration: 0.3s;
+}
+.sanPham a {
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  height: 310px;
+}
+.sanPham a .price span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  text-decoration: line-through;
+  margin-left: 5px;
+  color: #222;
+}
+/* Name and image */
+.sanPham a img {
+  display: block;
+  margin: 15px auto;
+  transition-duration: 0.2s;
+  width: 200px;
+  height: 200px;
+}
+/* Di chuyen anh? len tren */
+.sanPham a:hover > img {
+  margin: 5px auto 25px;
+}
+/* Ten san pham */
+.sanPham h3 {
+  display: block;
+  padding: 0 10px;
+  color: #333;
+  line-height: 1.3em;
+  font-size: 15px;
+  font-weight: normal;
+}
+/* Hightlight ten san pham khi hover */
+.sanPham a:hover h3 {
+  color: #288ad6;
+}
+/* ====== End Name and image ===== */
+
+/* Price */
+/* la div chua strong */
+.sanPham .price {
+  display: block;
+  padding: 5px 10px 0px 10px;
+}
+/* strong la gia tien in dam */
+.sanPham strong {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  font-size: 14px;
+  color: #e10c00;
+  line-height: 15px;
+}
+/* ===== End Price ===== */
+
+/* Khuyen mai */
+/* label la tag khuyen mai */
+.sanPham label {
+  display: inline-block;
+  position: absolute;
+  top: 207px;
+  left: 10px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 3px 5px 0;
+  height: 18px;
+}
+/* Giam gia thanh */
+.sanPham label.giamgia {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff9c00),
+    to(#ec1f1f)
+  );
+  border-radius: 10px;
+  padding: 1px 7px;
+  padding-left: 0;
+  padding-right: 10px;
+}
+/* Kí tự sấm sét */
+.fa-bolt {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  background: #f21;
+  color: white;
+}
+/* ===== End Khuyen mai ====== */
+
+.addToCartButton {
+  position: relative;
+  left: 30%;
+  background-color: #51b4e5;
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.addToCartButton:hover {
+  background-color: brown;
+}
+
+.addToCartButton:active {
+  box-shadow: 0px 0px 1px 1px #999999;
+}
+
+#searchResults {
+  position: relative;
+  left: 45%;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  width: 300px;
+  margin: 10px;
+}
+
+#searchResults #searchid {
+  font-weight: bold;
+  color: #555;
+}
+
+#searchResults .title {
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+#searchResults .price {
+  font-size: 18px;
+}
+
+#searchResults .card-img-top {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.button-searched {
+  position: relative;
+  margin: 10px 0px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-searched:hover {
+  background-color: #ea4a14;
+}
+
+.pagination {
+  position: absolute;
+  left: 45%;
+  clear: both;
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pagination a {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #555;
+}
+
+.pagination a:hover:not(.current) {
+  background-color: #ccc;
+}
+
+.pagination .current {
+  color: white;
+  background: #0950e8;
+}
+
+/*Footer*/
+.footer p {
+  text-align: left;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  font-size: 14px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.footer h5 {
+  font-size: 18px;
+  text-align: left;
+}
+
+.footer > h5 > li {
+  text-align: left;
+}
+/*End footer*/

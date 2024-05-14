@@ -1,0 +1,243 @@
+.title {
+  width: 100px;
+  background-color: #206699;
+  padding: 10px;
+  margin-top: 12px;
+  color: #fff;
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.title2 {
+  width: 190px;
+  background-color: #206699;
+  padding: 10px;
+  margin-top: 12px;
+  color: #fff;
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.line {
+  width: 1250px;
+  padding: 1px;
+  margin-bottom: 12px;
+  background-color: #206699;
+}
+
+.home-product-item {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 #206699;
+  transition: transform ease-in 0.1s;
+  will-change: transform;
+  margin: 5px;
+}
+
+.home-product-item__img {
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.home-product-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 1);
+}
+
+.home-product-item__name {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  line-height: 1.8rem;
+  padding: 0 10px;
+  margin: 10px 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.home-product-item__price {
+  font-size: 1rem;
+  display: flex;
+  margin-left: 10px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.home-product-item__condition {
+  position: absolute;
+  top: 12px;
+  left: -4px;
+  color: #206699;
+  background-color: currentColor;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  padding: 2px 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.home-product-item__condition span {
+  color: yellow;
+}
+
+.home-product-item__condition::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  border-top: 4px solid currentColor;
+  border-left: 4px solid transparent;
+  filter: brightness(60%);
+}
+
+.home-product-item__cart {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: orangered;
+}
+.home-product-item__cart .img {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 7px;
+  bottom: 7px;
+}
+
+.list {
+  width: 40px;
+  height: 37px;
+  list-style: none;
+  padding: 3px 8px;
+  background-color: #47a8d8;
+  border-radius: 20px;
+}
+
+.list:hover {
+  background-color: rgb(255, 90, 24);
+}
+
+.fa-user {
+  color: #fff;
+}
+
+/*navbar*/
+.navbar {
+  background-color: #f5f9fa;
+  height: 80px;
+  margin: 20px 5px;
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  color: #47a8d8;
+  font-size: 24px;
+  transition: 0.3s color;
+}
+
+.login-button,
+.btn-cart {
+  background-color: #47a8d8;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.25s background-color;
+}
+
+.btn-cart {
+  margin-left: 10px;
+  width: 40px;
+  padding-left: 12px;
+}
+
+.btn-cart:hover {
+  background-color: rgb(216, 91, 23);
+}
+
+.login-button:hover {
+  background-color: rgb(216, 91, 23);
+  color: white;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #47a8d8;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+/*End navbar*/
+
+/*Footer*/
+.footer p {
+  text-align: left;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  font-size: 14px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.footer h5 {
+  font-size: 18px;
+  text-align: left;
+}
+
+.footer > h5 > li {
+  text-align: left;
+}
+/*End footer*/
