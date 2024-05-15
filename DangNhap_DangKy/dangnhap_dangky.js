@@ -58,7 +58,7 @@ function login() {
       alert("Đăng nhập thất bại");
     } else {
       alert("Đăng nhập thành công");
-      window.location.href = "../nguoidung.html";
+      window.location.href = "../User/nguoidung.html";
     }
   } else {
     alert("Tài khoản không tồn tại");
@@ -168,7 +168,7 @@ function checkform1() {
 
     // Đăng nhập thành công
     alert("Đăng nhập thành công.");
-    window.location.href = "../nguoidung.html";
+    window.location.href = "../User/nguoidung.html";
   }
 }
 
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentUser = JSON.parse(localStorage.getItem("currentUser"));
     if (currentUser) {
       // Nếu có dữ liệu trong currentUser, chuyển hướng đến trang nguoidung.html
-      window.location.href = "../nguoidung.html";
+      window.location.href = "../User/nguoidung.html";
     } else {
       // Nếu không có dữ liệu trong currentUser, chuyển hướng đến trang trangchu.html
       window.location.href = "../trangchu.html";

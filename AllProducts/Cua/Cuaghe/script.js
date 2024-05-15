@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentUser = JSON.parse(localStorage.getItem("currentUser"));
     if (currentUser) {
       // Nếu có dữ liệu trong currentUser, chuyển hướng đến trang nguoidung.html
-      window.location.href = "../../../nguoidung.html";
+      window.location.href = "../../../User/nguoidung.html";
     } else {
       // Nếu không có dữ liệu trong currentUser, chuyển hướng đến trang trangchu.html
       window.location.href = "../../../trangchu.html";
